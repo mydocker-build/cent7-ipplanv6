@@ -1,0 +1,13 @@
+version: '3'
+services:
+  ipplanv6:
+    image: cent7-ipplanv6:latest
+    container_name: ipplanv6.sambokit.local
+    hostname: ipplanv6
+    domainname: sambokit.local
+    network_mode: bridge
+    ports:
+      - 8081:80
+    restart: always
+    volumes:
+      - /srv/docker-data/ipplanv6.sambokit.local:/var/www/html
